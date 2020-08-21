@@ -6,7 +6,7 @@ export default function Homepage() {
     return (
         <>
             <div className="banner">
-                <img src="https://b2cdemo.getswift.asia/media/weltpixel/owlcarouselslider/images/s/c/screen_shot_2019-07-30_at_9.27.20_am.png" />
+                <img src="https://b2cdemo.getswift.asia/media/weltpixel/owlcarouselslider/images/h/5/h5_h2.png" />
             </div>
             <div className="wrapper">
                 <ProductList category_id="1"/>
