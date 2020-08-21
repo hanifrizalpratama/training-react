@@ -1,4 +1,5 @@
 import React from "react";
+import { list } from "../components/Data";
 
 function Cart() {
     return (
@@ -11,20 +12,26 @@ function Cart() {
                         <th>Item</th>
                         <th>Title</th>
                         <th>Price</th>
+                        <th>Qty</th>
+                        <th>Subtotal</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td style={{ width: '30%' }}><img src="https://b2cdemo.getswift.asia/media/catalog/product/cache/a9d97be5cf53dad9f1babe6243c87d2f/m/h/mh02-black_main.jpg" /></td>
-                        <td>Product 4</td>
-                        <td>Rp. 10.000</td>
-                    </tr>
-                    <tr>
-                        <td style={{ width: '30%' }}><img src="https://b2cdemo.getswift.asia/media/catalog/product/cache/a9d97be5cf53dad9f1babe6243c87d2f/m/h/mh02-black_main.jpg" /></td>
-                        <td>Product 5</td>
-                        <td>Rp. 10.000</td>
-                    </tr>
-                </tbody>
+                
+                    {list.map(list => (
+                        <tbody key='{list.category_id}'>
+                            {
+                                list.products.map((products) =>(
+                                    <tr key={products.id}>
+                                        <td style={{ width: '20%' }}><img style={{ maxWidth : '200px' }} src={products.img} /></td>
+                                        <td>{products.title}</td>
+                                        <td>{products.price}</td>
+                                        <td>1</td>
+                                        <td>{products.price}</td>
+                                    </tr>
+                                ))
+                            }
+                            </tbody>
+                    ))}
             </table>
             </div>
         </>
